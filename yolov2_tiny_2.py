@@ -398,7 +398,6 @@ class Yolov2_plus(nn.Module):
 
         self.maxpool = nn.MaxPool2d(kernel_size=2, stride=2)
         self.lrelu = nn.LeakyReLU(0.1, inplace=True)
-        # self.lrelu = nn.ReLU(True)
         self.slowpool = nn.MaxPool2d(kernel_size=2, stride=1)
 
         self.conv1 = nn.Conv2d(
