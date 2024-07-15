@@ -228,8 +228,7 @@ def test_for_train(temp_path, model, args):
 
     img_id = -1
 
-    """GPU-WARM-UP:
-    source: https://web.archive.org/web/20240303115849/https://deci.ai/blog/measure-inference-time-deep-neural-networks/"""
+    """GPU-WARM-UP:"""
     im = np.random.randn(1, 3, 416, 416)
     im_variable = Variable(torch.from_numpy(im)).float().cuda()
     for _ in range(10):
