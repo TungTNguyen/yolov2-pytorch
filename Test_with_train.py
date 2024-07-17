@@ -284,7 +284,7 @@ def test_for_train(temp_path, model, args):
                             all_boxes[cls][img_id] = cls_det.cpu().numpy()
 
     Throughput = (repetitions * args.batch_size) / total_time
-    print("Final Inference time:", Throughput)
+    print("Final Inference speed:", Throughput)
 
     with open(det_file, "wb") as f:
         pickle.dump(all_boxes, f, pickle.HIGHEST_PROTOCOL)
